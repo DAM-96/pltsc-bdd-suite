@@ -1,0 +1,26 @@
+{
+  "name": "pltsc-bdd-suite",
+  "version": "1.0.0",
+  "description": "A cucumber test suite for a custom JAR file",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAM-96/pltsc-bdd-suite.git"
+  },
+  "keywords": [
+    "cucumber"
+  ],
+  "author": "Daniel Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DAM-96/pltsc-bdd-suite/issues"
+  },
+  "homepage": "https://github.com/DAM-96/pltsc-bdd-suite#readme",
+  "dependencies": {
+    "cucumber": "^6.0.7",
+    "dotenv": "^16.0.3"
+  }
+}
