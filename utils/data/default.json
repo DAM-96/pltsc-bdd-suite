@@ -7,6 +7,6 @@
     "expected": {
         "coords": [4,3],
         "patches": 4,
-        "response": "200"
+        "status": "200"
     }
 }
