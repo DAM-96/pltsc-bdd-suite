@@ -37,11 +37,7 @@ Given('instructions {string}', async function (string) {
 //WHEN
 When('calling service with data', async function () {
     const rawResponse = await postToService(testData);
-    console.log("-----   RAW RESPONSE  -----")
-    console.log(rawResponse)
     callResponse = await rawResponse.json();
-    console.log("-----   RESPONSE JSON  -----")
-    console.log(callResponse)
     callStatus = await rawResponse.status;
 });
 
@@ -49,8 +45,6 @@ When('calling service with data', async function () {
 //THEN
 Then('output coords equal {string}', async function (string) {
     sourceData = await parseData(string)
-    console.log(" ------- SOURCE DATA -----------")
-    console.log(sourceData)
     assert.deepEqual(callResponse.coords, sourceData.expected.coords)
 });
 
