@@ -9,6 +9,9 @@ const serviceCleaningSessions = "/v1/cleaning-sessions";
 // Keywords and File paths directory
 const dataFiles = new Map();
 dataFiles.set("default", "./data/default.json");
+dataFiles.set("invalid-float", "./data/standard-invalid-float.json");
+dataFiles.set("invalid-int", "./data/standard-invalid-int.json");
+dataFiles.set("invalid-string", "./data/standard-invalid-string.json");
 
 const parseData = async function (fileName){
     try {
@@ -17,7 +20,7 @@ const parseData = async function (fileName){
         fileContents = await fs.readFile(filePath, 'utf-8');
         return JSON.parse(fileContents);
     } catch (error) {
-        console.log("Something went wrong when retrieving the JSON file.\n")
+        console.log("\nUnable to retreive JSON file:\n    - File not found\n    - Or dataFile keyword not set\n")
         console.log(error)
     }
 }
@@ -43,14 +46,24 @@ const buildServiceURL = async function (){
 }
 
 
-const generateJSONData = async function(testDataMap){
+const generateJSONData = async function(testDataMap, removeCallEntry=""){
     let rawData = {
         roomSize: testDataMap.get("roomSize"),
         coords: testDataMap.get("coords"),
         patches: testDataMap.get("patches"),
         instructions: testDataMap.get("instructions"),
     }
-    return JSON.stringify(rawData);
+    try {
+        // if (removeCallEntry != ""){
+        //     delete rawData[removeCallEntry]
+        // }
+        console.log(" -- Attempting call with the following data: --")
+        console.log(rawData)
+        return JSON.stringify(rawData);
+    } catch(error) {
+        console.log("Something went wrong when removing the selected entry.\n")
+        console.log(error)
+    }
 }
 
 exports.parseData = parseData;

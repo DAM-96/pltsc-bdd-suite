@@ -1,0 +1,12 @@
+{
+    "dataID": "standard-invalid-string",
+    "roomSize": "testString",
+    "coords": "testString",
+    "patches": [["testString","testString"],["testString","testString"],["testString","testString"],["testString","testString"]],
+    "instructions": "testString",
+    "expected": {
+        "coords": null,
+        "patches": null,
+        "status": "500"
+    }
+}

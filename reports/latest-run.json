@@ -1,0 +1,1995 @@
+[
+  {
+    "description": "    Ensure that service calls containing invalid body elements for fulfilling the call have built-in failsafes for non-standard data.",
+    "keyword": "Feature",
+    "name": "Standard Calls with Valid Data",
+    "line": 1,
+    "id": "standard-calls-with-valid-data",
+    "tags": [],
+    "uri": "features\\processing\\standardCall-invalidData.feature",
+    "elements": [
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-roomsize-as-a-single-int",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Send service call with roomSize as a single int",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 5
+          },
+          {
+            "name": "@Reg1",
+            "line": 5
+          },
+          {
+            "name": "@IntReplacement",
+            "line": 5
+          },
+          {
+            "name": "@RoomSize",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "roomSize \"invalid-int\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-roomsize-as-a-single-string",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Send service call with roomSize as a single string",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 14
+          },
+          {
+            "name": "@Reg1",
+            "line": 14
+          },
+          {
+            "name": "@StringReplacement",
+            "line": 14
+          },
+          {
+            "name": "@RoomSize",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "roomSize \"invalid-string\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-roomsize-as-a-single-float",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Send service call with roomSize as a single float",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 23
+          },
+          {
+            "name": "@Reg1",
+            "line": 23
+          },
+          {
+            "name": "@FloatReplacement",
+            "line": 23
+          },
+          {
+            "name": "@RoomSize",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "roomSize \"invalid-float\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-coords-as-a-single-int",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Send service call with coords as a single int",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 32
+          },
+          {
+            "name": "@Reg1",
+            "line": 32
+          },
+          {
+            "name": "@IntReplacement",
+            "line": 32
+          },
+          {
+            "name": "@Coords",
+            "line": 32
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "coords \"invalid-int\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-coords-as-a-single-string",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "Send service call with coords as a single string",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 41
+          },
+          {
+            "name": "@Reg1",
+            "line": 41
+          },
+          {
+            "name": "@StringReplacement",
+            "line": 41
+          },
+          {
+            "name": "@Coords",
+            "line": 41
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "coords \"invalid-string\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-coords-as-a-single-float",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Send service call with coords as a single float",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 50
+          },
+          {
+            "name": "@Reg1",
+            "line": 50
+          },
+          {
+            "name": "@FloatReplacement",
+            "line": 50
+          },
+          {
+            "name": "@Coords",
+            "line": 50
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "coords \"invalid-float\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-int",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Send service call with patches as a single int",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 59
+          },
+          {
+            "name": "@Reg1",
+            "line": 59
+          },
+          {
+            "name": "@IntReplacement",
+            "line": 59
+          },
+          {
+            "name": "@Patches",
+            "line": 59
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 61,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "patches \"invalid-int\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-string",
+        "keyword": "Scenario",
+        "line": 69,
+        "name": "Send service call with patches as a single string",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 68
+          },
+          {
+            "name": "@Reg1",
+            "line": 68
+          },
+          {
+            "name": "@StringReplacement",
+            "line": 68
+          },
+          {
+            "name": "@Patches",
+            "line": 68
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 70,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "patches \"invalid-string\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 74,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-float",
+        "keyword": "Scenario",
+        "line": 78,
+        "name": "Send service call with patches as a single float",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 77
+          },
+          {
+            "name": "@Reg1",
+            "line": 77
+          },
+          {
+            "name": "@FloatReplacement",
+            "line": 77
+          },
+          {
+            "name": "@Patches",
+            "line": 77
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 79,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 80,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "patches \"invalid-float\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 82,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 83,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 84,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-int",
+        "keyword": "Scenario",
+        "line": 87,
+        "name": "Send service call with patches as a single int",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 86
+          },
+          {
+            "name": "@Reg1",
+            "line": 86
+          },
+          {
+            "name": "@IntReplacement",
+            "line": 86
+          },
+          {
+            "name": "@Intructions",
+            "line": 86
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 88,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 90,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "instructions \"invalid-int\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 92,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 12000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:44:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 93,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-string",
+        "keyword": "Scenario",
+        "line": 96,
+        "name": "Send service call with patches as a single string",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 95
+          },
+          {
+            "name": "@Reg1",
+            "line": 95
+          },
+          {
+            "name": "@StringReplacement",
+            "line": 95
+          },
+          {
+            "name": "@Intructions",
+            "line": 95
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 97,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 98,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 99,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 100,
+            "name": "instructions \"invalid-string\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 101,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:44:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-service-call-with-patches-as-a-single-float",
+        "keyword": "Scenario",
+        "line": 105,
+        "name": "Send service call with patches as a single float",
+        "tags": [
+          {
+            "name": "@InvalidData",
+            "line": 104
+          },
+          {
+            "name": "@Reg1",
+            "line": 104
+          },
+          {
+            "name": "@FloatReplacement",
+            "line": 104
+          },
+          {
+            "name": "@Intructions",
+            "line": 104
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 106,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "instructions \"invalid-float\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 110,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:44:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 111,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Ensure that service calls containing the proper body elements for fulfilling the call have built-in failsafes for empty data and respond properly to valid data.",
+    "keyword": "Feature",
+    "name": "Standard Calls with Valid Data",
+    "line": 1,
+    "id": "standard-calls-with-valid-data",
+    "tags": [],
+    "uri": "features\\processing\\standardCall-validData.feature",
+    "elements": [
+      {
+        "id": "standard-calls-with-valid-data;control-call-with-base-values-for-testing",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Control Call with base values for testing",
+        "tags": [
+          {
+            "name": "@ValidData",
+            "line": 5
+          },
+          {
+            "name": "@ControlCall",
+            "line": 5
+          },
+          {
+            "name": "@Smoke",
+            "line": 5
+          },
+          {
+            "name": "@Reg1",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "output coords equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "patchesCleaned equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "response status code 200",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-a-service-call-without-the-roomsize-attribute-in-the-body",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Send a service call without the roomSize attribute in the body",
+        "tags": [
+          {
+            "name": "@ValidData",
+            "line": 16
+          },
+          {
+            "name": "@EmptyElement",
+            "line": 16
+          },
+          {
+            "name": "@RoomSize",
+            "line": 16
+          },
+          {
+            "name": "@Reg1",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "calling service with missing \"roomSize\" data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: 500 == 400\n    + expected - actual\n\n    -500\n    +400\n\n    at World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:68:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-a-service-call-without-the-coords-attribute-in-the-body",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Send a service call without the coords attribute in the body",
+        "tags": [
+          {
+            "name": "@ValidData",
+            "line": 24
+          },
+          {
+            "name": "@EmptyElement",
+            "line": 24
+          },
+          {
+            "name": "@Coords",
+            "line": 24
+          },
+          {
+            "name": "@Reg1",
+            "line": 24
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "calling service with missing \"coords\" data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:49"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:51:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "response status code 400",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-a-service-call-without-the-patches-attribute-in-the-body",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Send a service call without the patches attribute in the body",
+        "tags": [
+          {
+            "name": "@ValidData",
+            "line": 32
+          },
+          {
+            "name": "@EmptyElement",
+            "line": 32
+          },
+          {
+            "name": "@Patches",
+            "line": 32
+          },
+          {
+            "name": "@Reg1",
+            "line": 32
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "instructions \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 9000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:44:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "output coords equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:57"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "patchesCleaned equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "standard-calls-with-valid-data;send-a-service-call-without-the-instructions-attribute-in-the-body",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "Send a service call without the instructions attribute in the body",
+        "tags": [
+          {
+            "name": "@ValidData",
+            "line": 41
+          },
+          {
+            "name": "@EmptyElement",
+            "line": 41
+          },
+          {
+            "name": "@Instructions",
+            "line": 41
+          },
+          {
+            "name": "@Reg1",
+            "line": 41
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "roomSize \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "coords \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "patches \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "calling service with data",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:42"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 8000000,
+              "error_message": "FetchError: invalid json response body at http://localhost:49153/v1/cleaning-sessions reason: Unexpected end of JSON input\n    at C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\node_modules\\node-fetch\\lib\\index.js:273:32\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async World.<anonymous> (C:\\Users\\danie\\OneDrive\\Documents\\Projects\\JobPosApplications\\pltsc-bdd-suite\\features\\step_definitions\\common_steps.js:44:20)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "output coords equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:57"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "patchesCleaned equal \"default\"",
+            "match": {
+              "location": "features\\step_definitions\\common_steps.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

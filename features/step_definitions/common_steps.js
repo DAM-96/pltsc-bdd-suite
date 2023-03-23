@@ -1,15 +1,19 @@
-const { Given, Then, When } = require ('cucumber');
+const { Given, Then, When, Before } = require ('cucumber');
 const { parseData, postToService } = require('../../utils/config');
 const assert = require('assert');
 
 const testData = new Map();
-testData.set('roomSize', null);
-testData.set('coords', null);
-testData.set('patches', null);
-testData.set('instructions', null);
+
 let callResponse;
 let callStatus;
-let sourceData
+let sourceData;
+
+Before(async function(){
+    testData.set('roomSize', null);
+    testData.set('coords', null);
+    testData.set('patches', null);
+    testData.set('instructions', null);
+})
 
 
 // GIVEN
@@ -37,6 +41,13 @@ Given('instructions {string}', async function (string) {
 //WHEN
 When('calling service with data', async function () {
     const rawResponse = await postToService(testData);
+    callResponse = await rawResponse.json();
+    console.log(callResponse);
+    callStatus = await rawResponse.status;
+});
+
+When('calling service with missing {string} data', async function (string) {
+    const rawResponse = await postToService(testData, string);
     callResponse = await rawResponse.json();
     callStatus = await rawResponse.status;
 });

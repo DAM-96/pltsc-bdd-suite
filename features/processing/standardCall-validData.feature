@@ -1,6 +1,6 @@
-Feature: Make a service call containing all of the API call required elements
+Feature: Standard Calls with Valid Data
 
-    Ensure that service calls containing the proper body elements for fulfilling the call have built-in failsafes for invalid data and respond properly to valid data.
+    Ensure that service calls containing the proper body elements for fulfilling the call have built-in failsafes for empty data and respond properly to valid data.
 
     @ValidData @ControlCall @Smoke @Reg1
     Scenario: Control Call with base values for testing
@@ -18,16 +18,16 @@ Feature: Make a service call containing all of the API call required elements
         Given coords "default"
         And patches "default"
         And instructions "default"
-        When calling service with incomplete data
-        Then response status code 500
+        When calling service with missing "roomSize" data
+        Then response status code 400
 
     @ValidData @EmptyElement @Coords @Reg1
     Scenario: Send a service call without the coords attribute in the body
         Given roomSize "default"
         And patches "default"
         And instructions "default"
-        When calling service with incomplete data
-        Then response status code 500
+        When calling service with missing "coords" data
+        Then response status code 400
 
     @ValidData @EmptyElement @Patches @Reg1
     Scenario: Send a service call without the patches attribute in the body
