@@ -1,6 +1,7 @@
 # PLTSC-BDD-Suite:
 This repo contains a test automation framework that aims to test a specific service which creates a server with http request processing functionalities.
-All of the planning surrounding the test scenarios contained in this suite can be fount on the ``` PLTSC-MTP.pdf ``` file.
+#### All of the planning surrounding the test scenarios contained in this suite can be fount on the ``` PLTSC-MTP.pdf ``` file.
+#### A sample report has been created with the name ``` sample-html-report.html ``` inside the reports folder.
 
 ## Pre-requisites:
 These additional tools are required to be present on the testers' machines in order to be able to execute the tests:
