@@ -1,11 +1,11 @@
 {
-    "dataID": "cleaning-endOnPatch",
-    "roomSize": [5, 5],
+    "dataID": "default",
+    "roomSize": [5, 10],
     "coords": [1,1],
     "patches": [[0,0],[2,2],[3,3],[4,4]],
-    "instructions": "SWNNEEENNE",
+    "instructions": "SWNNEEENNEEEEEES",
     "expected": {
-        "coords": [4,4],
+        "coords": [9,3],
         "patches": 4,
         "status": "200"
     }

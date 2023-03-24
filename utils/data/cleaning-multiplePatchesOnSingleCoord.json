@@ -1,0 +1,12 @@
+{
+    "dataID": "default",
+    "roomSize": [5, 5],
+    "coords": [1,1],
+    "patches": [[0,0],[0,0],[0,0],[4,4],[4,4],[4,4],[4,4]],
+    "instructions": "SWNNEEENNES",
+    "expected": {
+        "coords": [4,3],
+        "patches": 2,
+        "status": "200"
+    }
+}

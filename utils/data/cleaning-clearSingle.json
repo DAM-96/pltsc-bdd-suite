@@ -1,0 +1,12 @@
+{
+    "dataID": "cleaning-clearTwice",
+    "roomSize": [5, 5],
+    "coords": [1,1],
+    "patches": [[0,0],[2,2],[3,3],[4,4]],
+    "instructions": "SWN",
+    "expected": {
+        "coords": [0,1],
+        "patches": 1,
+        "status": "200"
+    }
+}

@@ -14,6 +14,28 @@ Feature: Standard Calls with Valid Data
         And patchesCleaned equal "default"
         And response status code 200
 
+    @ValidData @ControlCall @Smoke @Reg1
+    Scenario: Control Call with base values for testing
+        Given roomSize "default-alternate"
+        And coords "default-alternate"
+        And patches "default-alternate"
+        And instructions "default-alternate"
+        When calling service with data 
+        Then output coords equal "default-alternate"
+        And patchesCleaned equal "default-alternate"
+        And response status code 200
+
+    @ValidData @ControlCall @Smoke @Reg1
+    Scenario: Control Call with rectangular map for testing
+        Given roomSize "default-rectangular"
+        And coords "default-rectangular"
+        And patches "default-rectangular"
+        And instructions "default-rectangular"
+        When calling service with data 
+        Then output coords equal "default-rectangular"
+        And patchesCleaned equal "default-rectangular"
+        And response status code 200
+
     #Empty elements validation
     @ValidData @EmptyElement @RoomSize @Reg1
     Scenario: Send a service call with the roomSize attribute as an empty array in the body

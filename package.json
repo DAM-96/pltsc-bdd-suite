@@ -4,7 +4,8 @@
   "description": "A cucumber test suite for a custom JAR file",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --format json:./reports/latest-run.json && report",
+    "test": "cucumber-js --format json:./reports/latest-run.json",
+    "posttest": "report",
     "report": "node ./utils/reporter.js"
   },
   "repository": {

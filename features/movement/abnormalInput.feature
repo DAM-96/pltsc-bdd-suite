@@ -3,7 +3,7 @@ Feature: Calls with variance in instructions for verifying propper instruction p
     Ensure that abnormal movement instructions and error processing are working as expected.
 
     #Invalid instructions attribute
-    @InvalidData @Reg1 @IntReplacement @Intructions
+    @Movement @InvalidData @Reg1 @IntReplacement @Intructions
     Scenario: Send service call with patches as a single int
         Given roomSize "default"
         And coords "default"
@@ -12,7 +12,7 @@ Feature: Calls with variance in instructions for verifying propper instruction p
         When calling service with data 
         Then response status code 400
 
-    @InvalidData @Reg1 @StringReplacement @Intructions
+    @Movement @InvalidData @Reg1 @StringReplacement @Intructions
     Scenario: Send service call with patches as a single string
         Given roomSize "default"
         And coords "default"
@@ -21,7 +21,7 @@ Feature: Calls with variance in instructions for verifying propper instruction p
         When calling service with data 
         Then response status code 400
 
-    @InvalidData @Reg1 @FloatReplacement @Intructions
+    @Movement @InvalidData @Reg1 @FloatReplacement @Intructions
     Scenario: Send service call with patches as a single float
         Given roomSize "default"
         And coords "default"
@@ -30,7 +30,7 @@ Feature: Calls with variance in instructions for verifying propper instruction p
         When calling service with data 
         Then response status code 400
 
-    @InvalidData @Reg1 @LowercaseValue @Intructions
+    @Movement @InvalidData @Reg1 @LowercaseValue @Intructions
     Scenario: Send a service call with instructions in lowercase
         Given roomSize "movement-abnormal-lowercase"
         And coords "movement-abnormal-lowercase"
@@ -41,7 +41,7 @@ Feature: Calls with variance in instructions for verifying propper instruction p
         And patchesCleaned equal "movement-abnormal-lowercase"
         And response status code 200
 
-    @InvalidData @Reg1 @LowercaseValue @Intructions
+    @Movement @InvalidData @Reg1 @MixedValue @Intructions
     Scenario: Send a service call with integers embeded into valid instructions
         Given roomSize "movement-abnormal-mixedNumbers"
         And coords "movement-abnormal-mixedNumbers"

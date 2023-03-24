@@ -59,6 +59,15 @@ Feature: Standard Calls with Invalid Data
         When calling service with data 
         Then response status code 400
 
+    @InvalidData @Reg1 @OOB @Coords
+    Scenario: Send service call with out of bound coords
+        Given roomSize "invalid-OOBCoords"
+        And coords "invalid-OOBCoords"
+        And patches "invalid-OOBCoords"
+        And instructions "invalid-OOBCoords"
+        When calling service with data 
+        Then response status code 400
+
 
     #Invalid patches attribute
     @InvalidData @Reg1 @IntReplacement @Patches
@@ -88,31 +97,21 @@ Feature: Standard Calls with Invalid Data
         When calling service with data 
         Then response status code 400
 
-
-    #Invalid instructions attribute
-    @InvalidData @Reg1 @IntReplacement @Intructions
-    Scenario: Send service call with patches as a single int
-        Given roomSize "default"
-        And coords "default"
-        And patches "default"
-        And instructions "invalid-int"
-        When calling service with data 
-        Then response status code 400
-
-    @InvalidData @Reg1 @StringReplacement @Intructions
-    Scenario: Send service call with patches as a single string
-        Given roomSize "default"
-        And coords "default"
-        And patches "default"
-        And instructions "invalid-string"
-        When calling service with data 
-        Then response status code 400
-
-    @InvalidData @Reg1 @FloatReplacement @Intructions
+        @InvalidData @Reg1 @EmptyPatches @Patches
     Scenario: Send service call with patches as a single float
         Given roomSize "default"
         And coords "default"
-        And patches "default"
-        And instructions "invalid-float"
+        And patches "invalid-emptyPatchesArray"
+        And instructions "default"
         When calling service with data 
         Then response status code 400
+
+    @InvalidData @Reg1 @OOB @Coords
+    Scenario: Send service call with out of bound patches
+        Given roomSize "invalid-OOBPatches"
+        And coords "invalid-OOBPatches"
+        And patches "invalid-OOBPatches"
+        And instructions "invalid-OOBPatches"
+        When calling service with data 
+        Then response status code 400
+        

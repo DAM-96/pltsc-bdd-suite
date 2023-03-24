@@ -13,7 +13,7 @@ Feature: Standard calls for verifying propper instruction processing
         And patchesCleaned equal "control-fullmapping"
         And response status code 200
 
-    @ValidData @ControlCall @Smoke @Reg1 @Movement
+    @ValidData @Skid @Smoke @Reg1 @Movement
     Scenario: Skid in place around a size 10 map
         Given roomSize "movement-skid-10map"
         And coords "movement-skid-10map"

@@ -9,15 +9,33 @@ const serviceCleaningSessions = "/v1/cleaning-sessions";
 // Keywords and File paths directory
 const dataFiles = new Map();
 dataFiles.set("default", "./data/default.json");
+dataFiles.set("default-rectangular", "./data/default-rectangular.json");
+dataFiles.set("default-alternate", "./data/default-alternate.json");
 dataFiles.set("control-fullmapping", "./data/control-fullmapping.json");
 dataFiles.set("empty", "./data/empty-data.json");
+
+//Invalid data Files
 dataFiles.set("invalid-float", "./data/standard-invalid-float.json");
 dataFiles.set("invalid-int", "./data/standard-invalid-int.json");
 dataFiles.set("invalid-string", "./data/standard-invalid-string.json");
 dataFiles.set("invalid-intArray", "./data/standard-invalid-intArray.json");
+dataFiles.set("invalid-emptyPatchesArray", "./data/standard-invalid-emptyPatchesArray.json");
+dataFiles.set("invalid-OOBCoords", "./data/standard-invalid-OOBCoords.json");
+dataFiles.set("invalid-OOBPatches", "./data/standard-invalid-OOBPatches.json");
+
+//Movement Files
 dataFiles.set("movement-skid-10map", "./data/movement-skid-10map.json");
 dataFiles.set("movement-abnormal-lowercase", "./data/movement-abnormal-lowercase.json");
 dataFiles.set("movement-abnormal-mixedNumbers", "./data/movement-abnormal-mixedNumbers.json");
+
+//Cleaning Files
+dataFiles.set("cleaning-clearSingle", "./data/cleaning-clearSingle.json");
+dataFiles.set("cleaning-clearTwice", "./data/cleaning-clearTwice.json");
+dataFiles.set("cleaning-endOnPatch", "./data/cleaning-endOnPatch.json");
+dataFiles.set("cleaning-skidOnPatch", "./data/cleaning-skidOnPatch.json");
+dataFiles.set("cleaning-startOnPatch", "./data/cleaning-startOnPatch.json");
+dataFiles.set("cleaning-multiplePatchesOnSingleCoord", "./data/cleaning-multiplePatchesOnSingleCoord.json");
+
 
 const parseData = async function (fileName){
     try {
@@ -47,11 +65,13 @@ const postToService = async function (testDataMap){
 }
 
 
+//Creates URL for service calls based on port, base URL and api path
 const buildServiceURL = async function (){
     return [serviceURL, ":", process.env.PORT, serviceCleaningSessions].join("");
 }
 
 
+//Takes Map object with call parameters and returns data for inputting into service call in JSON format
 const generateJSONData = async function(testDataMap, removeCallEntry=""){
     let rawData = {
         roomSize: testDataMap.get("roomSize"),
@@ -63,8 +83,6 @@ const generateJSONData = async function(testDataMap, removeCallEntry=""){
         // if (removeCallEntry != ""){
         //     delete rawData[removeCallEntry]
         // }
-        console.log(" -- Attempting call with the following data: --")
-        console.log(rawData)
         return JSON.stringify(rawData);
     } catch(error) {
         console.log("Something went wrong when removing the selected entry.\n")

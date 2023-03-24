@@ -1,9 +1,9 @@
 {
-    "dataID": "default",
+    "dataID": "cleaning-skidOnPatch",
     "roomSize": [5, 5],
     "coords": [1,1],
     "patches": [[0,0],[2,2],[3,3],[4,4]],
-    "instructions": "SWNNEEENNES",
+    "instructions": "SWNNEEENNENENEEENNNS",
     "expected": {
         "coords": [4,3],
         "patches": 4,
