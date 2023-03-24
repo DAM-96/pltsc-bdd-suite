@@ -36,3 +36,5 @@ Feature: Altered calls with missing and additional elements
         When calling service with missing "instructions" data
         Then output coords equal "default"
         And patchesCleaned equal "default"
+
+    
