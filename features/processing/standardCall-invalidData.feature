@@ -98,7 +98,7 @@ Feature: Standard Calls with Invalid Data
         Then response status code 400
 
         @InvalidData @Reg1 @EmptyPatches @Patches
-    Scenario: Send service call with patches as a single float
+    Scenario: Send service call with patches as an empty element embeded with valid elements
         Given roomSize "default"
         And coords "default"
         And patches "invalid-emptyPatchesArray"
