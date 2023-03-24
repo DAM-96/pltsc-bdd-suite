@@ -2,11 +2,11 @@
     "dataID": "standard-invalid-int",
     "roomSize": 10,
     "coords": 10,
-    "patches": [10,10,10,10],
+    "patches": 10,
     "instructions": 10,
     "expected": {
         "coords": null,
         "patches": null,
-        "status": "500"
+        "status": "400"
     }
 }

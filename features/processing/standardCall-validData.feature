@@ -2,6 +2,7 @@ Feature: Standard Calls with Valid Data
 
     Ensure that service calls containing the proper body elements for fulfilling the call have built-in failsafes for empty data and respond properly to valid data.
 
+    #Default control call
     @ValidData @ControlCall @Smoke @Reg1
     Scenario: Control Call with base values for testing
         Given roomSize "default"
@@ -13,37 +14,44 @@ Feature: Standard Calls with Valid Data
         And patchesCleaned equal "default"
         And response status code 200
 
+    #Empty elements validation
     @ValidData @EmptyElement @RoomSize @Reg1
-    Scenario: Send a service call without the roomSize attribute in the body
-        Given coords "default"
+    Scenario: Send a service call with the roomSize attribute as an empty array in the body
+        Given roomSize "empty"
+        And coords "default"
         And patches "default"
         And instructions "default"
-        When calling service with missing "roomSize" data
+        When calling service with data
         Then response status code 400
 
     @ValidData @EmptyElement @Coords @Reg1
-    Scenario: Send a service call without the coords attribute in the body
+    Scenario: Send a service call without the coords attribute as an empty array in the body
         Given roomSize "default"
+        And coords "empty"
         And patches "default"
         And instructions "default"
-        When calling service with missing "coords" data
+        When calling service with data
         Then response status code 400
 
     @ValidData @EmptyElement @Patches @Reg1
-    Scenario: Send a service call without the patches attribute in the body
+    Scenario: Send a service call without the patches attribute as an empty array in the body
         Given roomSize "default"
         And coords "default"
+        And patches "empty"
         And instructions "default"
         When calling service with data
         Then output coords equal "default"
-        And patchesCleaned equal "default"
+        And patchesCleaned equal "empty"
+        And response status code 200
 
     @ValidData @EmptyElement @Instructions @Reg1
-    Scenario: Send a service call without the instructions attribute in the body
+    Scenario: Send a service call without the instructions attribute as an empty string in the body
         Given roomSize "default"
         And coords "default"
         And patches "default"
+        And instructions "empty"
         When calling service with data
-        Then output coords equal "default"
-        And patchesCleaned equal "default"
+        Then output coords equal "empty"
+        And patchesCleaned equal "empty"
+        And response status code 200
     

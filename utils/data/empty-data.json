@@ -1,0 +1,12 @@
+{
+    "dataID": "empty",
+    "roomSize": [],
+    "coords": [],
+    "patches": [],
+    "instructions": "",
+    "expected": {
+        "coords": [1,1],
+        "patches": 0,
+        "status": "400"
+    }
+}

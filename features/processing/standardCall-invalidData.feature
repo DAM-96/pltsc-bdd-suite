@@ -1,7 +1,8 @@
-Feature: Standard Calls with Valid Data
+Feature: Standard Calls with Invalid Data
 
     Ensure that service calls containing invalid body elements for fulfilling the call have built-in failsafes for non-standard data.
 
+    #Invalid roomSize attribute
     @InvalidData @Reg1 @IntReplacement @RoomSize
     Scenario: Send service call with roomSize as a single int
         Given roomSize "invalid-int"
@@ -29,6 +30,8 @@ Feature: Standard Calls with Valid Data
         When calling service with data 
         Then response status code 400
 
+
+    #Invalid coords attribute
     @InvalidData @Reg1 @IntReplacement @Coords
     Scenario: Send service call with coords as a single int
         Given roomSize "default"
@@ -56,7 +59,9 @@ Feature: Standard Calls with Valid Data
         When calling service with data 
         Then response status code 400
 
-        @InvalidData @Reg1 @IntReplacement @Patches
+
+    #Invalid patches attribute
+    @InvalidData @Reg1 @IntReplacement @Patches
     Scenario: Send service call with patches as a single int
         Given roomSize "default"
         And coords "default"
@@ -83,6 +88,8 @@ Feature: Standard Calls with Valid Data
         When calling service with data 
         Then response status code 400
 
+
+    #Invalid instructions attribute
     @InvalidData @Reg1 @IntReplacement @Intructions
     Scenario: Send service call with patches as a single int
         Given roomSize "default"

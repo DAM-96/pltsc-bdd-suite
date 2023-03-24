@@ -1,0 +1,12 @@
+{
+    "dataID": "standard-invalid-intArray",
+    "roomSize": [10],
+    "coords": [10],
+    "patches": [10],
+    "instructions": [10],
+    "expected": {
+        "coords": null,
+        "patches": null,
+        "status": "400"
+    }
+}

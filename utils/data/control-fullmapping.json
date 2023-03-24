@@ -1,0 +1,12 @@
+{
+    "dataID": "default-alternate",
+    "roomSize": [5, 5],
+    "coords": [0,0],
+    "patches": [[0,4]],
+    "instructions": "NNNNESSSSENNNNESSSSENNNN",
+    "expected": {
+        "coords": [4,4],
+        "patches": 1,
+        "status": "200"
+    }
+}

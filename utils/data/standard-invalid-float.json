@@ -2,11 +2,11 @@
     "dataID": "standard-invalid-float",
     "roomSize": 10.5,
     "coords": 10.5,
-    "patches": [10.5,10.5,10.5,10.5],
+    "patches": 10.5,
     "instructions": 10.5,
     "expected": {
         "coords": null,
         "patches": null,
-        "status": "500"
+        "status": "400"
     }
 }

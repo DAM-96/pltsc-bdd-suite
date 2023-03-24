@@ -9,9 +9,15 @@ const serviceCleaningSessions = "/v1/cleaning-sessions";
 // Keywords and File paths directory
 const dataFiles = new Map();
 dataFiles.set("default", "./data/default.json");
+dataFiles.set("control-fullmapping", "./data/control-fullmapping.json");
+dataFiles.set("empty", "./data/empty-data.json");
 dataFiles.set("invalid-float", "./data/standard-invalid-float.json");
 dataFiles.set("invalid-int", "./data/standard-invalid-int.json");
 dataFiles.set("invalid-string", "./data/standard-invalid-string.json");
+dataFiles.set("invalid-intArray", "./data/standard-invalid-intArray.json");
+dataFiles.set("movement-skid-10map", "./data/movement-skid-10map.json");
+dataFiles.set("movement-abnormal-lowercase", "./data/movement-abnormal-lowercase.json");
+dataFiles.set("movement-abnormal-mixedNumbers", "./data/movement-abnormal-mixedNumbers.json");
 
 const parseData = async function (fileName){
     try {
